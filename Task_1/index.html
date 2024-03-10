@@ -1,0 +1,52 @@
+@model List<EmployeeTimeTrackingApp.Employee>
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Employee Time Tracking</title>
+        <style>
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+    
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+    
+            th {
+                background-color: #f2f2f2;
+            }
+    
+            tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+    
+            tr.highlight {
+                background-color: #ffcccc;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <h2>Employee Time Tracking</h2>
+    
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Total Time Worked</th>
+        </tr>
+        @foreach (var employee in Model)
+        {
+            <tr class="@((employee.TotalTimeWorked < 100) ? "highlight" : "")">
+                <td>@employee.Name</td>
+                <td>@employee.TotalTimeWorked</td>
+            </tr>
+        }
+    </table>
+    
+    </body>
+    </html>
+    
