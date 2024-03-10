@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.Linq;
 
-namespace YourNamespace.Controllers
+namespace Test_2.Controllers
 {
     public class PieChartController : Controller
     {
