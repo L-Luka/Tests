@@ -32,7 +32,6 @@ namespace EmployeeTimeTrackingApp.Controllers
                 else
                 {
                     // Handle error response
-                    // For simplicity, let's assume the error is logged
                     Console.WriteLine("Error retrieving employee data: " + response.StatusCode);
                 }
             }
